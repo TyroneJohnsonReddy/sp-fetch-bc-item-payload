@@ -1,0 +1,29 @@
+definition_version: '2'
+
+mixins:
+  snowpark_shared:
+    artifacts:
+      - dest: source
+        src: app/
+    stage: ik_dev.automation.stg_fetch_item_payload
+
+entities:
+
+  fetch_bc_item_payload:
+    type: procedure
+    identifier:
+      name: fetch_bc_item_payload
+      schema: automation
+      database: ik_dev
+    handler: procedures.get_bc_data
+    signature: ''
+    returns: string
+    external_access_integrations:
+      - bc_access_integration
+    secrets:
+      cred: ik_dev.automation.bc_integration_credentials
+    meta:
+      use_mixins:
+        - snowpark_shared
+
+
