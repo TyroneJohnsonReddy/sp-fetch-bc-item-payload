@@ -1,0 +1,7 @@
+.env
+.packages/
+.venv/
+app.zip
+__pycache__
+app.zip
+dependencies.zip

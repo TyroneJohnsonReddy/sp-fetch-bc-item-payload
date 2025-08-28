@@ -32,3 +32,6 @@ CREATE OR REPLACE NETWORK RULE ik_dev.automation.microsoft_login_network_rule
   ENABLED = true ;
 
 
+grant usage on integration bc_access_integration to role 
+SYSADMIN ; 
+
