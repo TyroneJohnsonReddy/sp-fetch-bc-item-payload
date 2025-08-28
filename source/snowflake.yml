@@ -15,7 +15,7 @@ entities:
       name: fetch_bc_item_payload
       schema: automation
       database: ik_dev
-    handler: procedures.get_bc_data
+    handler: procedures.main
     signature: ''
     returns: string
     external_access_integrations:

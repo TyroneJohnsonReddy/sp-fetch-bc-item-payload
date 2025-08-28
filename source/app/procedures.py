@@ -25,7 +25,7 @@ def fetch_all_data(base_url, headers):
     return all_data
 
 
-def get_bc_data(session: Session):
+def main(session: Session):
     msg = None
     try:
         print("fetching data from business central")
@@ -75,6 +75,8 @@ def get_bc_data(session: Session):
         msg = f"Error occurred: {str(ex)}"
         print(msg)
         raise RuntimeError(msg)
+    finally:
+        session.close()
 
 
 # For local debugging
@@ -83,7 +85,7 @@ if __name__ == "__main__":
     # Create a local Snowpark session
     with Session.builder.getOrCreate() as session:
         if len(sys.argv) > 1:
-            print(get_bc_data(session, *sys.argv[1:]))
+            print(main(session, *sys.argv[1:]))
         else:
-            print(get_bc_data(session))
-            session.close()
+            print(main(session))
+           
