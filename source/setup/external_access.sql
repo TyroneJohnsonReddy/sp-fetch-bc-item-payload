@@ -1,3 +1,5 @@
+// network rules and external access integration has been set up, below is for reference
+
 USE ROLE ACCOUNTADMIN ; 
 
 USE SCHEMA IK_DEV.AUTOMATION ; 
