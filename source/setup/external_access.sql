@@ -8,8 +8,8 @@ USE SCHEMA IK_DEV.AUTOMATION ;
 
 CREATE or replace SECRET ik_dev.automation.bc_integration_credentials
     TYPE = password
-    USERNAME ='e6bb21ac-41d6-48fc-bdf8-e0aeb1316b24'
-    PASSWORD='zEB8Q~ZPyUiRe7PS7u1GcM~SG_KNcJKYVN.VabIb' ;
+    USERNAME ='[REDACTED]'
+    PASSWORD='[REDACTED]' ;
 
 
 
